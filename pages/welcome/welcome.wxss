@@ -1,0 +1,34 @@
+.background-img {
+    height: 100vh;
+    width: 100vw;
+    /* background-image: url(https://api.likepoems.com/img/pe);
+  background-size: cover; */
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -99;
+}
+
+.background-img image {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.button {
+    margin-top: 400px;
+}
+
+.gif {
+    width: 30%;
+}
+
+.gif image {
+    width: 100%;
+}

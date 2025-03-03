@@ -1,0 +1,54 @@
+.search {
+    background-color: var(--bg-color-demo);
+    padding: 16rpx 32rpx;
+    margin-top: 16rpx;
+    margin-bottom: 24px;
+}
+
+.search:not(:last-child) {
+    margin-bottom: 32rpx;
+}
+
+page {
+    background-color: #e3e3e3;
+}
+
+.main {
+    height: 99vh;
+}
+
+.form {
+    height: 30vh;
+    margin-bottom: 24rpx;
+    padding-top: 24rpx;
+}
+
+.readme {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26rpx;
+    color: #999999;
+    margin-bottom: 32rpx;
+    margin-top: 32rpx;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-btn {
+    width: 81%;
+    margin: 32rpx;
+}
+
+.upload .t-grid {
+    background-color: #e3e3e3;
+}
+
+.upload .t-grid-item {
+    background-color: #e3e3e3;
+}

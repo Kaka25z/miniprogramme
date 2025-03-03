@@ -1,0 +1,20 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/face/face",
+        "pages/animal/animal",
+        "pages/car/car",
+        "pages/plant/plant",
+        "pages/welcome/welcome",
+        "pages/user/user",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "超级气球",
+        "navigationBarBackgroundColor": "#e3e3e3"
+    },
+    "componentFramework": "glass-easel",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
+}

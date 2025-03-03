@@ -1,0 +1,53 @@
+<viwe class="main">
+    <t-message id="t-message" />
+    <t-overlay visible="{{visible}}" duration="{{500}}" />
+    <view class="readme">
+        点击下方选择一张包含植物的图片进行识别
+    </view>
+    <view class="form">
+        <t-upload mediaType="{{['image']}}" max="{{1}}" files="{{fileList}}" bind:add="handleAdd"
+            bind:remove="handleRemove" t-class="upload" gridConfig="{{gridConfig}}" config="{{uploadConfig}}">
+        </t-upload>
+    </view>
+    <view class="button">
+        <t-button variant="outline" size="large" t-class="group-btn" bind:tap="identify">开始识别</t-button>
+    </view>
+    <view hidden="{{isShow}}">
+        <t-row class="row">
+            <t-col span="24">
+                <span class="title">
+                    相似度最高的是
+                </span>
+            </t-col>
+            <t-col span='24' offset="0.5">
+                <span class="text">
+                    {{highest.name}}
+                </span>
+                <view class="circle">
+                    <t-progress theme="circle" percentage="{{highest.score}}" track-color="#cacaca" stroke-width="12px" />
+                </view>
+            </t-col>
+        </t-row>
+        <t-row style="margin-top: 48rpx;">
+            <t-col span="22" offset="1.5">
+                <t-collapse theme="card" expandIcon>
+                    <t-collapse-panel header="其他可能的结果" value="{{0}}">
+                        <t-row>
+                            <t-col wx:for="{{others}}" wx:key="index" span='24'>
+                                <view class="content">
+                                    <span style="position: relative; left: 10%;">
+                                        {{item.name}}
+                                    </span>
+                                    <t-tag style="margin-left: 36rpx; justify-content: right; position: absolute; left: 65%;" variant="light-outline"
+                                        theme="primary">{{item.score}}%
+                                    </t-tag>
+                                </view>
+                            </t-col>
+                        </t-row>
+                    </t-collapse-panel>
+                </t-collapse>
+            </t-col>
+        </t-row>
+    </view>
+    <view class="bottom"></view>
+</viwe>

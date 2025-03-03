@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "t-row": "tdesign-miniprogram/row/row",
+    "t-col": "tdesign-miniprogram/col/col",
+    "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
+    "t-tab-bar-item": "tdesign-miniprogram/tab-bar-item/tab-bar-item",
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-message": "tdesign-miniprogram/message/message"
+  }
+}

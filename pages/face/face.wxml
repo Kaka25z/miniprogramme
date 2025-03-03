@@ -1,0 +1,50 @@
+<viwe class="main">
+    <t-message id="t-message" />
+    <t-overlay visible="{{visible}}" duration="{{500}}" />
+    <view class="readme">
+        点击下方选择第一张包含人脸的图片
+    </view>
+    <view class="form">
+        <t-row>
+            <t-col span="24" style="margin-bottom: 32rpx;">
+                <t-upload mediaType="{{['image']}}" max="{{1}}" files="{{image_1}}" bind:add="handleAdd_1" bind:remove="handleRemove_1" t-class="upload" gridConfig="{{gridConfig}}" config="{{uploadConfig}}">
+                </t-upload>
+            </t-col>
+            <view class="readme-1">
+                点击下方选择第二张包含人脸的图片
+            </view>
+            <t-col span="24">
+                <t-upload mediaType="{{['image']}}" max="{{1}}" files="{{image_2}}" bind:add="handleAdd_2" bind:remove="handleRemove_2" t-class="upload" gridConfig="{{gridConfig}}" config="{{uploadConfig}}">
+                </t-upload>
+            </t-col>
+        </t-row>
+
+    </view>
+    <view class="button">
+        <t-button variant="outline" size="large" t-class="group-btn" bind:tap="identify">开始识别</t-button>
+    </view>
+    <view hidden="{{isShow}}">
+        <t-row class="row">
+            <t-col span="24">
+                <span class="title">
+                    对比的结果是
+                </span>
+            </t-col>
+            <t-col span='24' offset="0.5">
+                <span class="text" wx:if="{{result < 40}}">
+                    不是同一个人
+                </span>
+                <span class="text" wx:if="{{result <= 75 && result > 39}}">
+                    这两个人很相似
+                </span>
+                <span class="text" wx:if="{{result > 75}}">
+                    这就是同一个人
+                </span>
+                <view class="circle">
+                    <t-progress theme="circle" percentage="{{result}}" track-color="#cacaca" stroke-width="12px" />
+                </view>
+            </t-col>
+        </t-row>
+    </view>
+    <view class="bottom"></view>
+</viwe>

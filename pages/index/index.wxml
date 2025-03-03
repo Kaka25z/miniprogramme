@@ -1,0 +1,52 @@
+<t-row>
+    <t-col span='24'>
+        <view class='search'>
+            <t-search placeholder="请输入搜索的内容" shape="round" maxlength="10" />
+        </view>
+    </t-col>
+    <t-col span='24'>
+        <view class="card-theme">
+            <t-swiper
+                class="scale-card-theme"
+                autoplay="true"
+                interval="3000"
+                navigation="{{ { type: 'dots' } }}"
+                list="{{swiperList}}"
+                image-props="{{ { shape: 'round' } }}"
+                previousMargin="34px"
+                nextMargin="34px"
+                t-class-prev-image="scale-candidate"
+                t-class-next-image="scale-candidate"
+                bind:click="onTap"
+            />
+        </view>
+    </t-col>
+    <t-col span='24' style="margin-top: 15px;">
+        <t-grid class="block" column="2" theme="card" align="left">
+            <t-grid-item text="动物识别" description="{{description}}" t-class-text="text" t-class-content="content" url="/pages/animal/animal">
+                <image class="img" src="/assets/img/D97D7E82D17545A58F12B9754A6FCD53.jpg" />
+            </t-grid-item>
+            <t-grid-item text="车型识别" description="{{description}}" t-class-text="text" t-class-content="content" url="/pages/car/car">
+                <image class="img" src="/assets/img/20231228120110381.jpg" />
+            </t-grid-item>
+            <t-grid-item text="植物识别" description="{{description}}" t-class-text="text" t-class-content="content" url="/pages/plant/plant">
+                <image class="img" src="/assets/img/1667898892855577_compressed.jpg" />
+            </t-grid-item>
+            <t-grid-item text="人脸对比" description="{{description}}" t-class-text="text" t-class-content="content" url="/pages/face/face">
+                <image class="img" src="/assets/img/1-200521092314N8.jpg" />
+            </t-grid-item>
+        </t-grid>
+    </t-col>
+    <t-col span='24'>
+        <t-tab-bar t-class="t-tab-bar" value="{{value}}" shape="round" theme="tag" split="{{false}}" safe-area-inset-bottom="{{false}}" bindchange="onChange">
+            <t-tab-bar-item
+                wx:for="{{list}}"
+                wx:key="value"
+                value="{{item.value}}"
+                icon="{{item.icon}}"
+                ariaLabel="{{item.ariaLabel}}"
+            >
+            </t-tab-bar-item>
+        </t-tab-bar>
+    </t-col>
+</t-row>

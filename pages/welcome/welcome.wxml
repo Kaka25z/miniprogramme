@@ -1,0 +1,8 @@
+<view class="background-img">
+    <image src="/assets/img/10b68454f19c6a4773431875ceeab7d4.jpg" />
+</view>
+<view class="main">
+    <view class="button">
+        <t-button theme="light" icon="login" size="large" variant="text" bind:tap="enter">进入系统</t-button>
+    </view>
+</view>

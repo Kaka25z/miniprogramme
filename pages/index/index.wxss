@@ -1,0 +1,51 @@
+.img {
+    width: 305rpx;
+    height: 190rpx;
+    border-radius: var(--td-grid-card-radius, var(--td-radius-large, 18rpx));
+}
+
+.content {
+    margin-left: 20rpx;
+}
+
+.block {
+    display: block;
+    margin-bottom: 32rpx;
+}
+
+.block .t-grid-item {
+    --td-grid-item-text-font-size : 32rpx;
+}
+
+.text {
+    font-weight: bold;
+}
+
+.border {
+    color: var(--td-border-level-1-color, #E7E7E7),
+}
+
+.swiper {
+    margin: 24px 32rpx;
+}
+
+.card-theme {
+    --td-swiper-radius: 0;
+    --td-swiper-item-padding: 0 12rpx;
+    --td-swiper-nav-dot-color: var(--td-bg-color-component, #ffffff);
+    --td-swiper-nav-dot-active-color: var(--td-brand-color, #0052d9);
+  
+    padding-bottom: 18px;
+}
+  
+.card-theme .card-theme-nav {
+    bottom: -18px;
+}
+
+.scale-candidate {
+    height: 126px !important;
+}
+
+.t-tab-bar {
+    margin-bottom: 48rpx;
+}

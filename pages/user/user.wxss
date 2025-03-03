@@ -1,0 +1,10 @@
+.t-tab-bar {
+    margin-bottom: 48rpx;
+}
+
+.button {
+    position: absolute;
+    top: 40vh;
+    padding-left: 5%;
+    width: 90%;
+}
